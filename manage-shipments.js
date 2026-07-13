@@ -220,20 +220,28 @@ window.sendEmail = async function(id){
         const shipment = snapshot.data();
 
         await sendShipmentEmail({
+    customerName: shipment.receiverName || shipment.customer,
+    customerEmail: shipment.receiverEmail || shipment.email,
+    trackingId: shipment.trackingId,
+    status: shipment.status,
+    origin: shipment.origin,
+    destination: shipment.destination,
+    description: shipment.description
+});
 
-            customerName: shipment.receiverName || shipment.customer,
+            
 
-            customerEmail: shipment.receiverEmail || shipment.email,
+            
 
-            trackingId: shipment.trackingId,
+            
 
-            status: shipment.status,
+            
 
-            origin: shipment.origin,
+            
 
-            destination: shipment.destination
+            
 
-        });
+    
 
         alert("Email sent successfully.");
 
