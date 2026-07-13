@@ -1011,7 +1011,7 @@
                 alert("Please enter your Tracking ID.");
                 return;
             }
-            alert("Tracking shipment: " + id + "\n\n(Status would load here in a full implementation.)");
+            window.location.href = "tracking.html?id=" + encodeURIComponent(id);
             trackingModal.classList.add("hidden");
             trackingModal.classList.remove("flex");
         });
