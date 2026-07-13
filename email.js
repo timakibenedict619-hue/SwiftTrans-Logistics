@@ -25,7 +25,8 @@ export async function sendShipmentEmail({
     trackingId,
     status,
     origin,
-    destination
+    destination,
+    description
 }) {
 
     if (!window.emailjs) {
@@ -41,8 +42,8 @@ export async function sendShipmentEmail({
             tracking_id: trackingId,
             shipment_status: status,
             shipment_origin: origin,
-            shipment_destination: destination
+            shipment_destination: destination,
+            shipment_description: description
         }
     );
-
 }
