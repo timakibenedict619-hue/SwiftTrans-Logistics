@@ -1,11 +1,18 @@
 import { db } from "./firebase.js";
-
+import {
+    initializeEmail,
+    sendShipmentEmail
+} from "./email.js";
 import {
     collection,
     getDocs,
+    getDoc,
     deleteDoc,
     doc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    
+
 
 const tableBody = document.getElementById("shipmentTable");
 const searchInput = document.getElementById("searchInput");
