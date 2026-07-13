@@ -1014,7 +1014,10 @@ if (id === "") {
 }
 
 // Display the tracking information on this page
-document.getElementById("trackingResult").innerHTML =
+const result = document.getElementById("trackingResult");
+
+result.classList.remove("hidden");
+result.innerHTML =
     "<h3>Tracking ID: " + id + "</h3>" +
     "<p>Status: In Transit</p>" +
     "<p>Current Location: New York, USA</p>";
