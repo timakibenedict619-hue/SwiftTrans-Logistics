@@ -7,7 +7,7 @@ import {
 // If already logged in, go directly to admin dashboard
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    window.location.href = "admin.html";
+    window.location.href = "dashboard.html";
   }
 });
 
